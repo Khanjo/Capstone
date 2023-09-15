@@ -1,6 +1,6 @@
 # Joshua Khan
 
-# The Dojo
+# The Dojo(WIP)
 
 **_A videogame ranking and leaderboard website_**
 
