@@ -13,7 +13,7 @@
 ## MVP Technologies: 
 ### Language:
 TypeScript 
-### Framework:
+### Framework: 
 Next.js
 ### Libraries:
 * React
