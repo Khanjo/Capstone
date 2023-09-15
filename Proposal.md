@@ -1,6 +1,6 @@
 # Joshua Khan
 
-# The Dojo(WIP)
+# The Dojo(TBD)
 
 **_A videogame ranking and leaderboard website for games that don't have one built in or if you want a private leaderboard_**
 
@@ -33,4 +33,4 @@ Next.js
 
 ## Component Diagram
 
-![Component Diagram](Capstone.drawio.png)
+![Component Diagram](./public/Capstone.drawio.png)
