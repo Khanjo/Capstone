@@ -5,7 +5,7 @@
 **_A videogame ranking and leaderboard website_**
 
 ## MVP:
-* User sign in
+* User registration and sign in
 * Log matches and change ranking based on results
 * Leaderboard
 
@@ -22,6 +22,8 @@ Javascript
 * User created tournaments with an invite and/or sign-up system
 * Animated Backgrounds
 * Forums
+* Secure Login with JWT
 
 ## Stretch Goal Technologies:
 * Aseprite
+* React-Auth-Kit
