@@ -10,7 +10,7 @@
 * Leaderboards to display users rankings.
 * Game Library. users should be able to look up and add games to the library and each game should have it's own rankings and leaderboard.
 
-## MVP Technologies:
+## MVP Technologies: 
 ### Language:
 Javascript 
 ### Libraries:
