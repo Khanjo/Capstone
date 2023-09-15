@@ -2,7 +2,7 @@
 
 # The Dojo(WIP)
 
-**_A videogame ranking and leaderboard website_**
+**_A videogame ranking and leaderboard website for games that don't have one built in or if you want a private leaderboard_**
 
 ## MVP:
 * User registration and sign in.
@@ -13,6 +13,8 @@
 ## MVP Technologies: 
 ### Language:
 TypeScript 
+### Framework:
+Next.js?
 ### Libraries:
 * React
 * Redux Toolkit
