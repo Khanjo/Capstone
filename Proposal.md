@@ -12,7 +12,7 @@
 
 ## MVP Technologies: 
 ### Language:
-Javascript 
+TypeScript 
 ### Libraries:
 * React
 * Redux Toolkit
