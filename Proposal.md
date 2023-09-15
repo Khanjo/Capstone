@@ -28,3 +28,7 @@ Javascript
 ## Stretch Goal Technologies:
 * Aseprite
 * React-Auth-Kit
+
+## Component Diagram
+
+![Component Diagram](Capstone.drawio.png)
