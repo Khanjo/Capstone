@@ -14,7 +14,7 @@
 ### Language:
 TypeScript 
 ### Framework:
-Next.js?
+Next.js
 ### Libraries:
 * React
 * Redux Toolkit
