@@ -1,0 +1,58 @@
+body {
+  background-image: url("../Public/Tatami.png");
+}
+
+h1 {
+  text-align: center;
+  font-size: 40pt;
+}
+
+h2 {
+  margin: 20px;
+  width: fit-content;
+}
+
+h2:hover {
+  animation: pulse 1s infinite ease-in;
+}
+
+@keyframes pulse {
+
+  0% {
+    text-shadow:
+      0 -1px 1px rgb(209, 244, 255),
+      0 -2px 2px rgb(199, 242, 255),
+      0 -3px 3px rgb(196, 239, 253),
+      0 -4px 4px rgb(185, 237, 255),
+      0 -4px 5px rgb(169, 233, 255),
+      0 -5px 6px rgb(147, 223, 255),
+      0 -6px 7px rgb(127, 217, 255),
+      0 -7px 8px rgb(92, 166, 231),
+      0 -8px 9px rgb(92, 138, 231),
+      0 -9px 10px rgb(34, 59, 172),
+      0 -10px 11px rgb(24, 51, 171),
+      0 -11px 12px rgb(18, 43, 157),
+      0 -11px 12px rgb(18, 43, 157),
+      0 -11px 12px rgb(18, 43, 157),
+      0 -11px 12px rgb(18, 43, 157);
+  }
+
+  100% {
+    text-shadow:
+      0 -1px 2px rgb(234, 246, 250),
+      0 -2px 4px rgb(218, 243, 251),
+      0 -3px 6px rgb(209, 243, 255),
+      0 -4px 8px rgb(185, 237, 255),
+      0 -5px 10px rgb(169, 233, 255),
+      0 -6px 12px rgb(147, 223, 255),
+      0 -7px 14px rgb(127, 217, 255),
+      0 -8px 16px rgb(92, 166, 231),
+      0 -9px 18px rgb(92, 138, 231),
+      0 -10px 19px rgb(34, 59, 172),
+      0 -10px 20px rgb(24, 51, 171),
+      0 -11px 21px rgb(18, 43, 157),
+      0 -11px 22px rgb(18, 43, 157),
+      0 -11px 23px rgb(18, 43, 157),
+      0 -11px 24px rgb(18, 43, 157);
+  }
+}
