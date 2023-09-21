@@ -16,6 +16,11 @@ h2:hover {
   animation: pulse 1s infinite ease-in;
 }
 
+p {
+  font-weight: bold;
+  font-size: 18pt;
+}
+
 @keyframes pulse {
 
   0% {

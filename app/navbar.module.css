@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+}
+
+.searchBar {
+    margin: 20px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.searchInput {
+    background-color: rgb(107, 66, 42);
+    border: inset rgb(140, 89, 59);
+    height: 17px;
+    color: antiquewhite;
+}
+
+.searchButton {
+    background-color: rgb(107, 66, 42);
+    color: antiquewhite;
+    border-color: rgb(140, 89, 59);
+    border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .searchBar {
+        margin-left: 20px;
+        margin-right: auto;
+    }
+}

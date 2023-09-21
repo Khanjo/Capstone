@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function RegisterLayout({
+export default function LoginLayout({
     children,
 }: {
     children: React.ReactNode

@@ -1,4 +1,4 @@
-.register {
+.login {
     text-align: center;
 }
 
@@ -20,6 +20,6 @@
     border-radius: 10px;
 }
 
-.loginText {
+.registerText {
     text-align: center;
 }
