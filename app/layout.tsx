@@ -6,21 +6,21 @@ import Navbar from './navbar'
 const roboto = Roboto_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'The Dojo',
-  description: "Online leaderboards for games that don't have one",
+    title: 'The Dojo',
+    description: "Online leaderboards for games that don't have one",
 }
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-      <Navbar />
-      <body className={roboto.className}>
-        {children}
-      </body>
-    </html>
-  )
+    return (
+        <html lang="en">
+            <Navbar />
+            <body className={roboto.className}>
+                {children}
+            </body>
+        </html>
+    )
 }
