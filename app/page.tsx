@@ -11,7 +11,7 @@ export default function Home() {
                 src='/fighter.gif'
                 alt='fighter'
                 width={200}
-                height={120}
+                height={300}
                 className={styles.fighter} />
         </main>
     )
