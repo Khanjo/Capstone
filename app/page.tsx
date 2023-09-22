@@ -7,6 +7,7 @@ export default function Home() {
         <main>
             <h1>Welcome to The Dojo</h1>
             <h2 className={styles.gameLink}><Link href="Games">Games</Link></h2>
+            <Image src='' alt='fighter' />
         </main>
     )
 }
