@@ -1,36 +1,43 @@
+'use client'
 import styles from './page.module.css'
 import Link from 'next/link'
-import { useState, FormEvent } from "react";
+import React, { useState, FormEvent, useRef } from "react";
 import { auth } from "../firebase";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 function Register() {
-    const [signUpSuccess, setSignUpSuccess] = useState("");
+    const [registerSuccess, setRegisterSuccess] = useState("");
+    const emailRef = useRef<HTMLInputElement | null>(null);
+    const passwordRef = useRef<HTMLInputElement | null>(null);
 
-    function doSignUp(event: FormEvent<HTMLFormElement>) {
+    function doRegister(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        const email = event.target.email.value;
-        const password = event.target.password.value;
+        const email = emailRef.current?.value!;
+        const password = passwordRef.current?.value!;
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                setSignUpSuccess(`You've successfully signed up, ${userCredential.user.email}!`)
+                setRegisterSuccess(`You've successfully signed up, ${userCredential.user.email}!`)
             })
             .catch((error) => {
-                setSignUpSuccess(`There was an error signing up: ${error.message}!`)
+                setRegisterSuccess(`There was an error signing up: ${error.message}!`)
             });
     }
 
     return (
-        <>
+        <React.Fragment>
             <h1>Register</h1>
-
-            <form className={styles.register}>
+            {registerSuccess}
+            <form className={styles.register} onSubmit={doRegister}>
                 <input
+                    required
+                    ref={emailRef}
                     type="text"
                     name="email"
                     placeholder='email'
                     className={styles.inputs} /><br />
                 <input
+                    required
+                    ref={passwordRef}
                     type='text'
                     name='password'
                     placeholder='password'
@@ -38,6 +45,8 @@ function Register() {
                 <button type='submit' className={styles.button}>Register</button>
             </form>
             <p className={styles.loginText}>If you are already registered, please follow <Link href='login'>this link</Link></p>
-        </>
+        </React.Fragment>
     )
 }
+
+export default Register;
