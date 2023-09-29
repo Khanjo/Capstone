@@ -31,7 +31,7 @@ function Register() {
                 <input
                     required
                     ref={emailRef}
-                    type="text"
+                    type="email"
                     name="email"
                     placeholder='email'
                     className={styles.inputs} /><br />
