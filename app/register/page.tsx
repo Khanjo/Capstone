@@ -12,7 +12,7 @@ export default function Register() {
 
     const register = () => {
         createUserWithEmailAndPassword(auth, email, password)
-    }
+    };
 
     return (
         <>
@@ -47,13 +47,14 @@ export default function Register() {
                     className={styles.inputs}
                 /><br />
                 <button
-                    disabled={(!email || !password || !passwordConfirm) || (password !== passwordConfirm)}
-                    onClick={() => register()} className={styles.button}
+                    // disabled={(!email || !password || !passwordConfirm) || (password !== passwordConfirm)}
+                    onClick={() => register()}
+                    className={styles.button}
                 >
                     Register
                 </button>
             </form>
-            <p className={styles.registerText}>If you are not registered, please follow <Link href='register'>this link</Link></p>
+            <p className={styles.registerText}>If you are already registered, please follow <Link href='login'>this link</Link></p>
         </>
     )
 }
