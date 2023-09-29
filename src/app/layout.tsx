@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Roboto_Mono } from 'next/font/google'
 import Navbar from './components/navbar/navbar'
 import SessionProvider from './SessionProvider'
+import Footer from './components/Footer/footer'
 
 const roboto = Roboto_Mono({ subsets: ['latin'] })
 
@@ -24,6 +25,7 @@ export default function RootLayout({
                     {children}
                 </SessionProvider>
             </body>
+            <Footer />
         </html>
     )
 }
