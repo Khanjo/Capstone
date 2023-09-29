@@ -10,7 +10,7 @@ export default function Register() {
     const [password, setPassword] = useState('');
     const [passwordConfirm, setPasswordConfirm] = useState('');
 
-    const register = () => {
+    const signup = () => {
         createUserWithEmailAndPassword(auth, email, password)
     };
 
@@ -18,13 +18,14 @@ export default function Register() {
         <>
             <h1>Register</h1>
 
-            <form className={styles.register}>
+            <div className={styles.register}>
                 <input
                     required
                     id='email'
                     type="email"
                     name="email"
                     placeholder='email'
+                    autoComplete="email"
                     onChange={(e) => setEmail(e.target.value)}
                     className={styles.inputs}
                 /><br />
@@ -34,6 +35,7 @@ export default function Register() {
                     type='password'
                     name='password'
                     placeholder='password'
+                    autoComplete="current-password"
                     onChange={(e) => setPassword(e.target.value)}
                     className={styles.inputs}
                 /><br />
@@ -43,17 +45,18 @@ export default function Register() {
                     type='password'
                     name='passwordConfirm'
                     placeholder='enter your password again'
+                    autoComplete="current-password"
                     onChange={(e) => setPasswordConfirm(e.target.value)}
                     className={styles.inputs}
                 /><br />
                 <button
                     // disabled={(!email || !password || !passwordConfirm) || (password !== passwordConfirm)}
-                    onClick={() => register()}
+                    onClick={() => signup()}
                     className={styles.button}
                 >
                     Register
                 </button>
-            </form>
+            </div>
             <p className={styles.registerText}>If you are already registered, please follow <Link href='login'>this link</Link></p>
         </>
     )

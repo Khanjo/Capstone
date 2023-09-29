@@ -1,15 +1,15 @@
+import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials";
-import NextAuth from "next-auth/next";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from "../../../app/firebase";
 
 export const authOptions = {
     pages: {
-        signIn: "/login"
+        signIn: '/login'
     },
     providers: [
         CredentialsProvider({
-            name: "Credentials",
+            name: 'Credentials',
             credentials: {},
             async authorize(credentials): Promise<any> {
                 return await signInWithEmailAndPassword(auth, (credentials as any).email || '', (credentials as any).password || '')
@@ -20,9 +20,13 @@ export const authOptions = {
                         return null;
                     })
                     .catch(error => (console.log(error)))
+                    .catch((error) => {
+                        const errorCode = error.code;
+                        const errorMessage = error.message;
+                        console.log(error);
+                    });
             }
         })
     ],
 }
-
 export default NextAuth(authOptions)
