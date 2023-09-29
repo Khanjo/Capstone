@@ -22,7 +22,8 @@ export default function Home() {
                 width={200}
                 height={300}
                 className={styles.fighter} />
-            <button onClick={() => signOut()}>Log Out</button>
         </main>
     )
 }
+
+Home.requireAuth = true
