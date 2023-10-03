@@ -25,6 +25,16 @@
     border-radius: 10px;
 }
 
+.signOut {
+    height: 32px;
+    font-size: 20px;
+    margin: 20px;
+    background-color: rgb(107, 66, 42);
+    color: antiquewhite;
+    border-color: rgb(140, 89, 59);
+    border-radius: 10px;
+}
+
 @media (max-width: 500px) {
     .navbar {
         flex-wrap: wrap;

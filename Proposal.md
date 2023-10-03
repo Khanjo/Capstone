@@ -12,11 +12,13 @@
 
 ## MVP Technologies: 
 ### Language:
-JavaScript
+TypeScript
 ### Libraries:
-React
+* React
+* Redux Toolkit
+* React-Redux
 ### Database/Authentication:
-Firebase
+* Firebase
 
 ## Stretch Goals:
 * ELO based ranking

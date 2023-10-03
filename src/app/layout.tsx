@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Roboto_Mono } from 'next/font/google'
 import Navbar from './components/navbar/navbar'
 import SessionProvider from './SessionProvider'
-import Footer from './components/Footer/footer'
+import Footer from './components/footer/footer'
 
 const roboto = Roboto_Mono({ subsets: ['latin'] })
 
