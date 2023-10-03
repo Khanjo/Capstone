@@ -12,13 +12,11 @@
 
 ## MVP Technologies: 
 ### Language:
-TypeScript 
-### Framework: 
-Next.js
+JavaScript
 ### Libraries:
-* React
-* Redux Toolkit
-* React-Redux
+React
+### Database/Authentication:
+Firebase
 
 ## Stretch Goals:
 * ELO based ranking
@@ -29,7 +27,6 @@ Next.js
 
 ## Stretch Goal Technologies:
 * Aseprite
-* React-Auth-Kit
 
 ## Component Diagram
 
