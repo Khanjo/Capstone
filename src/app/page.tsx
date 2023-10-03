@@ -2,16 +2,8 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link'
-import { signOut, useSession } from 'next-auth/react';
-import { redirect } from 'next/navigation';
 
 export default function Home() {
-    const session = useSession({
-        required: true,
-        onUnauthenticated() {
-            redirect('/login');
-        },
-    });
     return (
         <main>
             <h1>Welcome to The Dojo</h1>
@@ -25,5 +17,3 @@ export default function Home() {
         </main>
     )
 }
-
-Home.requireAuth = true

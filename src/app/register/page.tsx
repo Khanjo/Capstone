@@ -1,25 +1,28 @@
 'use client'
-import { useState } from 'react';
-import { signIn } from 'next-auth/react'
 import styles from './page.module.css';
 import Link from 'next/link';
+import { auth } from '../../../firebase/firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 export default function Login() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [passwordConfirm, setPasswordConfirm] = useState('');
+
+    function doSignUp(event: any) {
+        event.preventDefault();
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        createUserWithEmailAndPassword(auth, email, password)
+    }
 
     return (
         <>
-            <h1>Log In</h1>
+            <h1>Register</h1>
 
-            <form className={styles.login}>
+            <form className={styles.register} onSubmit={doSignUp}>
                 <input
                     required
                     type="email"
                     name="email"
                     placeholder='Email'
-                    onChange={(e) => setEmail(e.target.value)}
                     className={styles.inputs}
                 /><br />
                 <input
@@ -27,7 +30,6 @@ export default function Login() {
                     type='password'
                     name='password'
                     placeholder='Password'
-                    onChange={(e) => setPassword(e.target.value)}
                     className={styles.inputs}
                 /><br />
                 <input
@@ -35,14 +37,13 @@ export default function Login() {
                     type='password'
                     name='passwordConfirm'
                     placeholder='Confirm Password'
-                    onChange={(e) => setPassword(e.target.value)}
                     className={styles.inputs}
                 /><br />
                 <button
-                    disabled={!email || !password || passwordConfirm != password}
-                    onClick={() => signIn('credentials', { email, password, redirect: true, callbackUrl: '/' })} className={styles.button}
-                >
-                    Login
+
+                    type='submit'
+                    className={styles.button}>
+                    Register
                 </button>
             </form>
             <p className={styles.registerText}>If you are already registered, please follow <Link href='login'>this link</Link></p>

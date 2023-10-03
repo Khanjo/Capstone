@@ -1,12 +1,17 @@
 'use client'
-import { useState } from 'react';
-import { signIn } from 'next-auth/react'
+import { auth } from '../../../firebase/firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import styles from './page.module.css';
 import Link from 'next/link';
 
 export default function Login() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+
+    function doSignIn(event: any) {
+        event.preventDefault();
+        const email = event.target.signinEmail.value;
+        const password = event.target.signinPassword;
+        signInWithEmailAndPassword(auth, email, password)
+    }
 
     return (
         <>
@@ -18,7 +23,6 @@ export default function Login() {
                     type="email"
                     name="email"
                     placeholder='email'
-                    onChange={(e) => setEmail(e.target.value)}
                     className={styles.inputs}
                 /><br />
                 <input
@@ -26,12 +30,10 @@ export default function Login() {
                     type='password'
                     name='password'
                     placeholder='password'
-                    onChange={(e) => setPassword(e.target.value)}
                     className={styles.inputs}
                 /><br />
                 <button
-                    disabled={!email || !password}
-                    onClick={() => signIn('credentials', { email, password, redirect: true, callbackUrl: '/' })} className={styles.button}
+                    onClick={doSignIn} className={styles.button}
                 >
                     Login
                 </button>

@@ -34,7 +34,7 @@
         "**/*.tsx",
         ".next/types/**/*.ts",
         "app/firebase.js",
-        "src/app/register/page.tsx",
+        "src/app/user/register/page.tsx",
         "firebase/clientApp.tss"
     ],
     "exclude": [

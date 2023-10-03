@@ -9,6 +9,6 @@ export default function Games() {
 
         </ul>
 
-        <button onClick={addGame}>Add Game</button>
+        <Link href={"newgame"}>Add Game</Link>
     </>
 }

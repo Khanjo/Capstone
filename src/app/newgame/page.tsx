@@ -1,6 +1,10 @@
 import React from "react";
 
 function NewGame() {
+    function addGame() {
+
+    }
+
     return (
         <React.Fragment>
             <form>
@@ -9,7 +13,7 @@ function NewGame() {
                     name="name"
                     placeholder="Name of game"
                 /><br />
-                <button type="submit">Add Game</button>
+                <button onClick={addGame} type="submit">Add Game</button>
             </form>
         </React.Fragment>
     );
