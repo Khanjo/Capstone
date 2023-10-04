@@ -10,10 +10,10 @@ function Register() {
     const [password, setPassword] = useState('');
     const router = useRouter();
 
-    const doSignUp = async (event) => {
-        event.preventDefault();
+    const doSignUp = async (e) => {
+        e.preventDefault();
         const { result, error } = await signUp(email, password);
-
+        console.log(email, password)
         if (error) {
             return console.log(error)
         }
@@ -25,28 +25,30 @@ function Register() {
         <>
             <h1>Register</h1>
 
-            <div className={styles.register} onSubmit={doSignUp}>
-                <input
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder='Email'
-                    className={styles.inputs}
-                /><br />
-                <input
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                    type='password'
-                    name='password'
-                    id="password"
-                    placeholder='Password'
-                    className={styles.inputs}
-                /><br />
-                <button type='submit' className={styles.button}>Register</button>
+            <div>
+                <form className={styles.register} onSubmit={doSignUp}>
+                    <input
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder='Email'
+                        className={styles.inputs}
+                    /><br />
+                    <input
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                        type='password'
+                        name='password'
+                        id="password"
+                        placeholder='Password'
+                        className={styles.inputs}
+                    /><br />
+                    <button type='submit' className={styles.button}>Register</button>
+                </form>
+                <p className={styles.registerText}>If you are already registered, please follow <Link href='login'>this link</Link></p>
             </div>
-            <p className={styles.registerText}>If you are already registered, please follow <Link href='login'>this link</Link></p>
         </>
     )
 }
