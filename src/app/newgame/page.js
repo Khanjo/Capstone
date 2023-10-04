@@ -3,9 +3,10 @@ import addData from "@/firebase/firestore/addData";
 
 function NewGame() {
 
-    const addGame = async () => {
+    const addGame = async (e) => {
+        e.preventDefault()
         const data = {
-            name: 'John snow'
+            name: e.target.email.value
         }
         const { result, error } = await addData('users', 'user-id', data)
 
@@ -17,13 +18,13 @@ function NewGame() {
 
     return (
         <>
-            <form>
+            <form onSubmit={addGame}>
                 <input
                     type="text"
                     name="name"
                     placeholder="Name of game"
                 /><br />
-                <button onClick={addGame} type="submit">Add Game</button>
+                <button type="submit">Add Game</button>
             </form>
         </>
     );

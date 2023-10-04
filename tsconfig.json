@@ -38,7 +38,8 @@
         "src/firebase/clientApp.tss",
         "src/firebase/firebase.js",
         "src/app/register/page.js",
-        "src/app/login/page.js"
+        "src/app/login/page.js",
+        "src/app/newgame/page.js"
     ],
     "exclude": [
         "node_modules"
