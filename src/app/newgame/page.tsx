@@ -1,12 +1,22 @@
-import React from "react";
+'use client'
+import addData from "@/firebase/firestore/addData";
 
 function NewGame() {
-    function addGame() {
 
+    const addGame = async () => {
+        const data = {
+            name: 'John snow'
+        }
+        const { result, error } = await addData('users', 'user-id', data)
+
+        if (error) {
+            return console.log(error)
+        }
     }
 
+
     return (
-        <React.Fragment>
+        <>
             <form>
                 <input
                     type="text"
@@ -15,7 +25,7 @@ function NewGame() {
                 /><br />
                 <button onClick={addGame} type="submit">Add Game</button>
             </form>
-        </React.Fragment>
+        </>
     );
 }
 
