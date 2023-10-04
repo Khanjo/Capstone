@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Roboto_Mono } from 'next/font/google'
 import Navbar from './components/navbar/navbar'
 import Footer from './components/footer/footer'
-import SessionProvider from './SessionProvider'
+import { AuthContextProvider } from '@/context/AuthContext'
 
 const roboto = Roboto_Mono({ subsets: ['latin'] })
 
@@ -21,9 +21,9 @@ export default function RootLayout({
         <html lang="en">
             <Navbar />
             <body className={roboto.className}>
-                <SessionProvider>
+                <AuthContextProvider>
                     {children}
-                </SessionProvider>
+                </AuthContextProvider>
             </body>
             <Footer />
         </html>

@@ -1,16 +1,24 @@
 'use client'
-import { auth } from '../../../firebase/firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import styles from './page.module.css';
+import React, { useState } from "react";
+import signIn from "@/firebase/auth/signup";
+import { useRouter } from 'next/navigation';
+import styles from './page.module.css'
 import Link from 'next/link';
 
-export default function Login() {
+function Login() {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const router = useRouter()
 
-    function doSignIn(event: any) {
+    const doSignIn = async (event: any) => {
         event.preventDefault();
-        const email = event.target.signinEmail.value;
-        const password = event.target.signinPassword;
-        signInWithEmailAndPassword(auth, email, password)
+        const { result, error } = await signIn(email, password);
+
+        if (error) {
+            return console.log(error)
+        }
+        console.log(result)
+        return router.push("/")
     }
 
     return (
@@ -19,26 +27,28 @@ export default function Login() {
 
             <form className={styles.login}>
                 <input
+                    onChange={(e) => setEmail(e.target.value)}
                     required
                     type="email"
                     name="email"
+                    id="email"
                     placeholder='email'
                     className={styles.inputs}
                 /><br />
                 <input
+                    onChange={(e) => setPassword(e.target.value)}
                     required
                     type='password'
                     name='password'
+                    id="password"
                     placeholder='password'
                     className={styles.inputs}
                 /><br />
-                <button
-                    onClick={doSignIn} className={styles.button}
-                >
-                    Login
-                </button>
+                <button className={styles.button}>Login</button>
             </form>
             <p className={styles.loginText}>If you are not registered, please follow <Link href='register'>this link</Link></p>
         </>
     )
 }
+
+export default Login;

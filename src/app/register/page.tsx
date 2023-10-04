@@ -1,16 +1,25 @@
 'use client'
-import styles from './page.module.css';
+import React, { useState } from "react";
+import signUp from "@/firebase/auth/signup";
+import { useRouter } from 'next/navigation';
+import styles from './page.module.css'
 import Link from 'next/link';
-import { auth } from '../../../firebase/firebase';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
 
-export default function Login() {
+function Register() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordConfirm, setPasswordConfirm] = useState('');
+    const router = useRouter();
 
-    function doSignUp(event: any) {
+    const doSignUp = async (event: any) => {
         event.preventDefault();
-        const email = event.target.email.value;
-        const password = event.target.password.value;
-        createUserWithEmailAndPassword(auth, email, password)
+        const { result, error } = await signUp(email, password);
+
+        if (error) {
+            return console.log(error)
+        }
+        console.log(result)
+        return router.push("/")
     }
 
     return (
@@ -19,34 +28,37 @@ export default function Login() {
 
             <form className={styles.register} onSubmit={doSignUp}>
                 <input
+                    onChange={(e) => setEmail(e.target.value)}
                     required
                     type="email"
                     name="email"
+                    id="email"
                     placeholder='Email'
                     className={styles.inputs}
                 /><br />
                 <input
+                    onChange={(e) => setPassword(e.target.value)}
                     required
                     type='password'
                     name='password'
+                    id="password"
                     placeholder='Password'
                     className={styles.inputs}
                 /><br />
                 <input
+                    onChange={(e) => setPasswordConfirm(e.target.value)}
                     required
                     type='password'
                     name='passwordConfirm'
+                    id="passwordConfirm"
                     placeholder='Confirm Password'
                     className={styles.inputs}
                 /><br />
-                <button
-
-                    type='submit'
-                    className={styles.button}>
-                    Register
-                </button>
+                <button type='submit' className={styles.button}>Register</button>
             </form>
             <p className={styles.registerText}>If you are already registered, please follow <Link href='login'>this link</Link></p>
         </>
     )
 }
+
+export default Register;

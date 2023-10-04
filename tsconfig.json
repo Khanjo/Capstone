@@ -35,7 +35,8 @@
         ".next/types/**/*.ts",
         "app/firebase.js",
         "src/app/user/register/page.tsx",
-        "firebase/clientApp.tss"
+        "src/firebase/clientApp.tss",
+        "src/firebase/firebase.js"
     ],
     "exclude": [
         "node_modules"
