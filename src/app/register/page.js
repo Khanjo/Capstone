@@ -8,10 +8,9 @@ import Link from 'next/link';
 function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [passwordConfirm, setPasswordConfirm] = useState('');
     const router = useRouter();
 
-    const doSignUp = async (event: any) => {
+    const doSignUp = async (event) => {
         event.preventDefault();
         const { result, error } = await signUp(email, password);
 
@@ -26,7 +25,7 @@ function Register() {
         <>
             <h1>Register</h1>
 
-            <form className={styles.register} onSubmit={doSignUp}>
+            <div className={styles.register} onSubmit={doSignUp}>
                 <input
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -45,17 +44,8 @@ function Register() {
                     placeholder='Password'
                     className={styles.inputs}
                 /><br />
-                <input
-                    onChange={(e) => setPasswordConfirm(e.target.value)}
-                    required
-                    type='password'
-                    name='passwordConfirm'
-                    id="passwordConfirm"
-                    placeholder='Confirm Password'
-                    className={styles.inputs}
-                /><br />
                 <button type='submit' className={styles.button}>Register</button>
-            </form>
+            </div>
             <p className={styles.registerText}>If you are already registered, please follow <Link href='login'>this link</Link></p>
         </>
     )

@@ -36,7 +36,9 @@
         "app/firebase.js",
         "src/app/user/register/page.tsx",
         "src/firebase/clientApp.tss",
-        "src/firebase/firebase.js"
+        "src/firebase/firebase.js",
+        "src/app/register/page.js",
+        "src/app/login/page.js"
     ],
     "exclude": [
         "node_modules"

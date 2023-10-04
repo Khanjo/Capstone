@@ -10,7 +10,7 @@ function Login() {
     const [password, setPassword] = useState('')
     const router = useRouter()
 
-    const doSignIn = async (event: any) => {
+    const doSignIn = async (event) => {
         event.preventDefault();
         const { result, error } = await signIn(email, password);
 
@@ -25,7 +25,7 @@ function Login() {
         <>
             <h1>Log In</h1>
 
-            <form className={styles.login}>
+            <form className={styles.login} onSubmit={doSignIn}>
                 <input
                     onChange={(e) => setEmail(e.target.value)}
                     required

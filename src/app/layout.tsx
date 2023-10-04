@@ -21,9 +21,7 @@ export default function RootLayout({
         <html lang="en">
             <Navbar />
             <body className={roboto.className}>
-                <AuthContextProvider>
-                    {children}
-                </AuthContextProvider>
+                {children}
             </body>
             <Footer />
         </html>
