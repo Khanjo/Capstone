@@ -7,8 +7,8 @@ import Image from 'next/image';
 export default function Navbar() {
     return (
         <nav className={styles.navbar}>
-            <Link href="register"><h2>Register</h2></Link>
-            <Link href="login"><h2>Login</h2></Link>
+            <Link href="register" className={styles.link}><h2>Register</h2></Link>
+            <Link href="login" className={styles.link}><h2>Login</h2></Link>
             <button className={styles.signOut} onClick={() => signOut()}>Log Out</button>
             <Image
                 src='/HungryGuy.gif'

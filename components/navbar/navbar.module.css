@@ -40,6 +40,14 @@
     margin-right: auto;
 }
 
+.link:link {
+    color: cadetblue;
+}
+
+.link:visited {
+    color: darkorange;
+}
+
 @media (max-width: 500px) {
     .navbar {
         flex-wrap: wrap;

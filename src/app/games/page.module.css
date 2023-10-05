@@ -1,3 +1,28 @@
+.games {
+    padding-left: 400px;
+    padding-right: 400px;
+}
+
+.game {
+    font-size: x-large;
+    display: flex;
+    background-color: rgb(20, 20, 20, .6);
+    color: antiquewhite;
+    margin: 20px;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+.count {
+    display: flex;
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+.addGame {
+    text-align: center;
+}
+
 .input {
     height: 30pt;
     font-size: 26pt;
@@ -14,4 +39,12 @@
     color: antiquewhite;
     border-color: rgb(140, 89, 59);
     border-radius: 10px;
+}
+
+.link:link {
+    color: cadetblue;
+}
+
+.link:visited {
+    color: darkorange;
 }

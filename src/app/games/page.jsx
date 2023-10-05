@@ -18,15 +18,15 @@ export default function Games() {
     return (
         <>
             <h1>Games</h1>
-            <ul>
+            <ul className={styles.games}>
                 {games.map((game, id) => (
-                    <li key={id}>
-                        <Link href={`games/${id}`}>{game.name}</Link>
-                        <span>Players: ${game.players}</span>
+                    <li key={id} className={styles.game}>
+                        <Link href={`games/${id}`} className={styles.link}>{game.name}</Link>
+                        <span className={styles.count}>Players: {game.players}</span>
                     </li>
                 ))}
             </ul>
-            <form>
+            <form className={styles.addGame}>
                 <input
                     className={styles.input}
                     type="text"

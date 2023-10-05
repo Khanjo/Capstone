@@ -4,3 +4,21 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.fighters {
+    display: flex;
+}
+
+.fighter2 {
+    margin-left: auto;
+}
+
+.link:link {
+    color: cadetblue;
+    background-color: rgb(20, 20, 20, .6);
+}
+
+.link:visited {
+    color: darkorange;
+    background-color: rgb(20, 20, 20, .6);
+}
