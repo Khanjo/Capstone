@@ -16,6 +16,10 @@ export default function Page() {
             <h1>Game Name</h1>
 
             <ol className={styles.leaderboard}>
+                <li className={styles.legend}>
+                    <span>Email</span>
+                    <span className={styles.rank}>MMR:</span>
+                </li>
                 {players.map((player, id) => (
                     <li key={id} className={styles.player}>
                         <span>{player.email}</span>

@@ -1,3 +1,12 @@
+.legend {
+    font-size: x-large;
+    font-weight: bolder;
+    display: flex;
+    margin: 20px;
+    padding: 5px;
+    padding-left: 20px;
+}
+
 .player {
     font-size: x-large;
     display: flex;
@@ -5,14 +14,16 @@
     color: antiquewhite;
     margin: 20px;
     padding: 5px;
+    padding-left: 20px;
 }
 
 .leaderboard {
-    padding-left: 300px;
-    padding-right: 300px;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .rank {
     display: flex;
     margin-left: auto;
+    padding-right: 20px;
 }
