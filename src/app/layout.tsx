@@ -1,8 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Roboto_Mono } from 'next/font/google'
-import Navbar from './components/navbar/navbar'
-import Footer from './components/footer/footer'
+import Navbar from '../../components/navbar/navbar'
+import Footer from '../../components/footer/footer'
 import { AuthContextProvider } from '@/context/AuthContext'
 
 const roboto = Roboto_Mono({ subsets: ['latin'] })

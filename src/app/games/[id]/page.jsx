@@ -1,17 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from './page.module.css'
+import Link from "next/link";
 
-export default function Games() {
-
-    return (
-        <>
-            <h1>Games</h1>
-            <form>
-                <input
-                    className={styles.input}
-                    type="text" />
-
-            </form>
-        </>
-    )
-}

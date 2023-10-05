@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <main>
             <h1>Welcome to The Dojo</h1>
-            <h2 className={styles.gameLink}><Link href="Games">Games</Link></h2>
+            <h2 className={styles.gameLink}><Link href="games">Games</Link></h2>
             <Image
                 src='/fighter.gif'
                 alt='fighter'

@@ -39,7 +39,17 @@
         "src/firebase/firebase.js",
         "src/app/register/page.js",
         "src/app/login/page.js",
-        "src/app/newgame/page.js"
+        "src/app/newgame/page.js",
+        "src/app/page.jsx",
+        "src/app/layout.jsx",
+        "src/app/games/page.jsx",
+        "src/app/games/layout.jsx",
+        "src/app/games/[id]/page.jsx",
+        "src/app/api/gamedata/route.js",
+        "src/app/api/gamedata/[id]/route.js",
+        "components/navbar/navbar.jsx",
+        "components/footer/footer.jsx",
+        "components/card/card.jsx"
     ],
     "exclude": [
         "node_modules"
