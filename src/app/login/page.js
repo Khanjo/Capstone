@@ -43,7 +43,7 @@ function Login() {
                     placeholder='password'
                     className={styles.inputs}
                 /><br />
-                <button className={styles.button}>Login</button>
+                <button type='submit' className={styles.button}>Login</button>
             </form>
             <p className={styles.loginText}>If you are not registered, please follow <Link href='register'>this link</Link></p>
         </>

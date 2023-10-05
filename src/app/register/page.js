@@ -45,7 +45,7 @@ function Register() {
                         placeholder='Password'
                         className={styles.inputs}
                     /><br />
-                    <button type='submit' onClick={doSignUp}>Register</button>
+                    <button type='submit' onClick={doSignUp} className={styles.button}>Register</button>
                 </form>
                 <p className={styles.registerText}>If you are already registered, please follow <Link href='login'>this link</Link></p>
             </div>
