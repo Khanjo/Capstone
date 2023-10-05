@@ -11,22 +11,29 @@ export default function Games() {
         { name: 'Dragonball Fighterz', players: 12 },
     ])
 
+    const addGame = async (e) => {
+        e.preventDefault();
+    }
+
     return (
         <>
             <h1>Games</h1>
-            {games.map((game, id) => (
-                <li key={id}>
-                    <Link href={`games/${id}`}>{game.name}</Link>
-                    <span>Players: ${game.players}</span>
-                </li>
-            ))}
+            <ul>
+                {games.map((game, id) => (
+                    <li key={id}>
+                        <Link href={`games/${id}`}>{game.name}</Link>
+                        <span>Players: ${game.players}</span>
+                    </li>
+                ))}
+            </ul>
             <form>
                 <input
                     className={styles.input}
                     type="text"
                     placeholder="Game Name" />
-
+                <button onClick={addGame} className={styles.button} type="submit">Add Game</button>
             </form>
+
         </>
     )
 }

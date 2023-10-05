@@ -1,0 +1,18 @@
+.player {
+    font-size: x-large;
+    display: flex;
+    background-color: rgb(20, 20, 20, .6);
+    color: antiquewhite;
+    margin: 20px;
+    padding: 5px;
+}
+
+.leaderboard {
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.rank {
+    display: flex;
+    margin-left: auto;
+}
