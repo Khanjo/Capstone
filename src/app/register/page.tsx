@@ -1,8 +1,8 @@
 'use client'
 import React, { useState } from "react";
 import { useRouter } from 'next/navigation';
-import { signUp } from '../../firebase/auth/signup'
-import styles from './page.module.css'
+import signUp from '../../firebase/auth/signup';
+import styles from './page.module.css';
 import Link from 'next/link';
 
 function Register() {
@@ -10,7 +10,7 @@ function Register() {
     const [password, setPassword] = useState('');
     const router = useRouter();
 
-    const doSignUp = async (e) => {
+    const doSignUp = async (e: any) => {
         e.preventDefault();
         const { result, error } = await signUp(email, password);
         console.log(email, password)

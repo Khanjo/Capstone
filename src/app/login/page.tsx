@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from "react";
+import signIn from '../../firebase/auth/signin';
 import { useRouter } from 'next/navigation';
 import styles from './page.module.css'
 import Link from 'next/link';
@@ -9,8 +10,8 @@ function Login() {
     const [password, setPassword] = useState('')
     const router = useRouter()
 
-    const doSignIn = async (event) => {
-        event.preventDefault();
+    const doSignIn = async (e: any) => {
+        e.preventDefault();
         const { result, error } = await signIn(email, password);
 
         if (error) {

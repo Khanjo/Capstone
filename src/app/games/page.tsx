@@ -11,7 +11,7 @@ export default function Games() {
         { name: 'Dragonball Fighterz', players: 12 },
     ])
 
-    const addGame = async (e) => {
+    const addGame = async (e: any) => {
         e.preventDefault();
     }
 
